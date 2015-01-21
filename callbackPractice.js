@@ -114,6 +114,7 @@ var uniq = function(arr, callback){
   for (var i = 0; i < arr.length; i++){
     if(newArr.indexof(arr[i]) < 0){
       newArr.push(arr[i]);
+      callback(newArr);
     }
   }
 };
@@ -135,11 +136,8 @@ uniq(names, function(uniqArr){
     //Code Here for each
   var each = function(arr, callback){
     for (var i = 0; i < arr.length; i++){
-    var item = arr[i]; 
-      return indice[i];
+      callback(arr[i], i)
     }
-       callback(each);
-}
   }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
