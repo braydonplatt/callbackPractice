@@ -153,8 +153,14 @@ each(names, function(item, indice){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-var getUserById = function(obj, key, callback){
-   
+var getUserById = function(arr, str, callback){
+   for (var i = 0; i < arr.length; i++){
+
+    if (arr[i].id === str) {
+      callback(users[i]);
+    }
+  
+  }
 }
 
 
