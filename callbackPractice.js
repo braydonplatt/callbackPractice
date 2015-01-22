@@ -82,13 +82,15 @@ multiply(4, 3, function(answer){
 
 
   //Code Here for contains
- var contains = function(arr, str, callback){
-  for (var i = 0; i < arr.length; i++){
+var contains = function(arr, str, callback){
+   var flag = false;
+  for(var i = 0; i < arr.length; i++){
     if(str === arr[i]) {
-      callback(true);
+      flag = true;
     }
   }
- }; 
+  callback(flag);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains(names, 'Colt', function(result){
