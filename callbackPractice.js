@@ -157,7 +157,7 @@ var getUserById = function(arr, str, callback){
    for (var i = 0; i < arr.length; i++){
 
     if (arr[i].id === str) {
-      callback(users[i]);
+      callback(arr[i]);
     }
   
   }
